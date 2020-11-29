@@ -712,7 +712,7 @@ var LibraryPThread = {
     var detached = 0;
     var schedPolicy = 0; /*SCHED_OTHER*/
     var schedPrio = 0;
-    if (attr && attr != {{{ C_DEFINES.__ATTRP_C11_THREAD }}}) {
+    if (attr && attr != {{{ cDefine('__ATTRP_C11_THREAD') }}}) {
       stackSize = {{{ makeGetValue('attr', 0, 'i32') }}};
       // Musl has a convention that the stack size that is stored to the pthread
       // attribute structure is always musl's #define DEFAULT_STACK_SIZE
